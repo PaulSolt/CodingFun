@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BDCC30342401F5680023D9EC /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCC30332401F5680023D9EC /* main.swift */; };
+		BDCC30412401F5800023D9EC /* CodingFunTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCC30402401F5800023D9EC /* CodingFunTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,10 +26,20 @@
 /* Begin PBXFileReference section */
 		BDCC30302401F5680023D9EC /* CodingFun */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CodingFun; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDCC30332401F5680023D9EC /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		BDCC303E2401F5800023D9EC /* CodingFunTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodingFunTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDCC30402401F5800023D9EC /* CodingFunTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingFunTests.swift; sourceTree = "<group>"; };
+		BDCC30422401F5800023D9EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		BDCC302D2401F5680023D9EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDCC303B2401F5800023D9EC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,6 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				BDCC30322401F5680023D9EC /* CodingFun */,
+				BDCC303F2401F5800023D9EC /* CodingFunTests */,
 				BDCC30312401F5680023D9EC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				BDCC30302401F5680023D9EC /* CodingFun */,
+				BDCC303E2401F5800023D9EC /* CodingFunTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,6 +73,15 @@
 				BDCC30332401F5680023D9EC /* main.swift */,
 			);
 			path = CodingFun;
+			sourceTree = "<group>";
+		};
+		BDCC303F2401F5800023D9EC /* CodingFunTests */ = {
+			isa = PBXGroup;
+			children = (
+				BDCC30402401F5800023D9EC /* CodingFunTests.swift */,
+				BDCC30422401F5800023D9EC /* Info.plist */,
+			);
+			path = CodingFunTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,6 +104,23 @@
 			productReference = BDCC30302401F5680023D9EC /* CodingFun */;
 			productType = "com.apple.product-type.tool";
 		};
+		BDCC303D2401F5800023D9EC /* CodingFunTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BDCC30432401F5800023D9EC /* Build configuration list for PBXNativeTarget "CodingFunTests" */;
+			buildPhases = (
+				BDCC303A2401F5800023D9EC /* Sources */,
+				BDCC303B2401F5800023D9EC /* Frameworks */,
+				BDCC303C2401F5800023D9EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CodingFunTests;
+			productName = CodingFunTests;
+			productReference = BDCC303E2401F5800023D9EC /* CodingFunTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -93,6 +132,9 @@
 				ORGANIZATIONNAME = "Paul Solt";
 				TargetAttributes = {
 					BDCC302F2401F5680023D9EC = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					BDCC303D2401F5800023D9EC = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
 				};
@@ -111,9 +153,20 @@
 			projectRoot = "";
 			targets = (
 				BDCC302F2401F5680023D9EC /* CodingFun */,
+				BDCC303D2401F5800023D9EC /* CodingFunTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BDCC303C2401F5800023D9EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BDCC302C2401F5680023D9EC /* Sources */ = {
@@ -121,6 +174,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDCC30342401F5680023D9EC /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDCC303A2401F5800023D9EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDCC30412401F5800023D9EC /* CodingFunTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +323,42 @@
 			};
 			name = Release;
 		};
+		BDCC30442401F5800023D9EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = LCRLD36TZ6;
+				INFOPLIST_FILE = CodingFunTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.paulsolt.CodingFunTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		BDCC30452401F5800023D9EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = LCRLD36TZ6;
+				INFOPLIST_FILE = CodingFunTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.paulsolt.CodingFunTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -279,6 +376,15 @@
 			buildConfigurations = (
 				BDCC30382401F5680023D9EC /* Debug */,
 				BDCC30392401F5680023D9EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BDCC30432401F5800023D9EC /* Build configuration list for PBXNativeTarget "CodingFunTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDCC30442401F5800023D9EC /* Debug */,
+				BDCC30452401F5800023D9EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
