@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		BDCC30342401F5680023D9EC /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCC30332401F5680023D9EC /* main.swift */; };
 		BDCC30412401F5800023D9EC /* CodingFunTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCC30402401F5800023D9EC /* CodingFunTests.swift */; };
+		BDCC30482401F9450023D9EC /* LSRTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCC30462401F9450023D9EC /* LSRTests.swift */; };
+		BDCC304A2401F95C0023D9EC /* LSR.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCC30492401F95C0023D9EC /* LSR.swift */; };
+		BDCC304B2401F95C0023D9EC /* LSR.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCC30492401F95C0023D9EC /* LSR.swift */; };
+		BDCC304E2401F9850023D9EC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDCC304D2401F9850023D9EC /* XCTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +33,9 @@
 		BDCC303E2401F5800023D9EC /* CodingFunTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodingFunTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDCC30402401F5800023D9EC /* CodingFunTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingFunTests.swift; sourceTree = "<group>"; };
 		BDCC30422401F5800023D9EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDCC30462401F9450023D9EC /* LSRTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSRTests.swift; sourceTree = "<group>"; };
+		BDCC30492401F95C0023D9EC /* LSR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSR.swift; sourceTree = "<group>"; };
+		BDCC304D2401F9850023D9EC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDCC304E2401F9850023D9EC /* XCTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +63,7 @@
 				BDCC30322401F5680023D9EC /* CodingFun */,
 				BDCC303F2401F5800023D9EC /* CodingFunTests */,
 				BDCC30312401F5680023D9EC /* Products */,
+				BDCC304C2401F9850023D9EC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				BDCC30332401F5680023D9EC /* main.swift */,
+				BDCC30492401F95C0023D9EC /* LSR.swift */,
 			);
 			path = CodingFun;
 			sourceTree = "<group>";
@@ -79,9 +89,18 @@
 			isa = PBXGroup;
 			children = (
 				BDCC30402401F5800023D9EC /* CodingFunTests.swift */,
+				BDCC30462401F9450023D9EC /* LSRTests.swift */,
 				BDCC30422401F5800023D9EC /* Info.plist */,
 			);
 			path = CodingFunTests;
+			sourceTree = "<group>";
+		};
+		BDCC304C2401F9850023D9EC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BDCC304D2401F9850023D9EC /* XCTest.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,6 +192,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDCC304A2401F95C0023D9EC /* LSR.swift in Sources */,
 				BDCC30342401F5680023D9EC /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -181,7 +201,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDCC304B2401F95C0023D9EC /* LSR.swift in Sources */,
 				BDCC30412401F5800023D9EC /* CodingFunTests.swift in Sources */,
+				BDCC30482401F9450023D9EC /* LSRTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
