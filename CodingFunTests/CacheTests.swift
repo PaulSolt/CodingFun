@@ -70,4 +70,18 @@ class CacheTests: XCTestCase {
         XCTAssertNil(weakNode)
     }
     
+    func testCacheFreeMemoryAfterRemoveAll() {
+        // Cache any object to verify its memory is cleared
+        let cache = Cache<NumberFormatter>(maxSize: 5)
+        var value: NumberFormatter? = NumberFormatter()
+        
+        weak var weakValue = value
+        
+        cache["test"] = value
+        
+        value = nil
+        cache.removeAll()
+        
+        XCTAssertNil(weakValue)
+    }
 }
