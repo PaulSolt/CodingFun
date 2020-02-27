@@ -16,7 +16,7 @@ class Node<T: Any>: Equatable where T: Equatable, T: CustomStringConvertible {
     }
     
     var next: Node?
-    var prev: Node?
+    weak var prev: Node?
     
     var value: ValueWrapper<T>?
     

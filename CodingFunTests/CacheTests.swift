@@ -9,7 +9,7 @@
 import XCTest
 
 class CacheTests: XCTestCase {
-
+    
     func testCache() {
         let cache = Cache<String>(maxSize: 5)
         
@@ -52,5 +52,22 @@ class CacheTests: XCTestCase {
         XCTAssertEqual("seven", cache["7"])
         XCTAssertNil(cache["2"])
     }
-
+    
+    func testNodeValueWrapperDoesNotCreateARetainCycle() {
+        var value: ValueWrapper? = ValueWrapper(key: "1", value: "One")
+        var node: Node? = Node(value: value!)
+        value?.node = node
+        
+        weak var weakValue = value
+        weak var weakNode = node
+        
+        // Clearing the references should cause the memory to clean up if there
+        // isn't a retain cycle between the two objects
+        value = nil
+        node = nil
+        
+        XCTAssertNil(weakValue)
+        XCTAssertNil(weakNode)
+    }
+    
 }

@@ -50,11 +50,6 @@ class LinkedList<T: Any> where T: Equatable, T: CustomStringConvertible {
     }
     
     func removeAll() {
-        var node = head
-        while (node != nil) {
-            node?.value = nil
-            node = node?.next
-        }
         head = nil
         tail = nil
     }

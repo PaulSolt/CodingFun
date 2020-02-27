@@ -16,7 +16,7 @@ class ValueWrapper<T: Any>: Equatable, CustomStringConvertible where T: Equatabl
     
     var key: String
     var value: T
-    var node: Node<T>?
+    weak var node: Node<T>?
     
     init(key: String, value: T) {
         self.key = key

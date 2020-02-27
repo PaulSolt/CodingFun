@@ -9,7 +9,7 @@
 import XCTest
 import CodingFun
 
-class LSRTests: XCTestCase {
+class ValueWrapperTests: XCTestCase {
     
     func testValueWrapper() {
         

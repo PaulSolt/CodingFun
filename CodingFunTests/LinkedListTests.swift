@@ -145,4 +145,68 @@ class LinkedListTests: XCTestCase {
         XCTAssertEqual(n3, list.head)
         XCTAssertEqual(n1, list.tail)
     }
+    
+    func testRemoveAllClearsMemory() {
+        let list = LinkedList<String>()
+        var n1: Node? = Node(value: ValueWrapper(key: "1", value: "One"))
+        var n2: Node? = Node(value: ValueWrapper(key: "2", value: "Two"))
+        var n3: Node? = Node(value: ValueWrapper(key: "3", value: "Three"))
+        
+        weak var weakN1 = n1
+        weak var weakN2 = n2
+        weak var weakN3 = n3
+        
+        // head | n3 -> n2 -> n1 | tail
+        
+        list.insert(n1!)
+        list.insert(n2!)
+        list.insert(n3!)
+
+        n1 = nil // Remove ownership from local variables
+        n2 = nil
+        n3 = nil
+        
+        list.removeAll() // clearing list should cleanup all nodes
+        
+        XCTAssertNil(weakN1)
+        XCTAssertNil(weakN2)
+        XCTAssertNil(weakN3)
+        
+        XCTAssertNil(list.head)
+        XCTAssertNil(list.tail)
+    }
+    
+    
+    func testRemoveLastClearsMemory() {
+        let list = LinkedList<String>()
+        var n1: Node? = Node(value: ValueWrapper(key: "1", value: "One"))
+        var n2: Node? = Node(value: ValueWrapper(key: "2", value: "Two"))
+        var n3: Node? = Node(value: ValueWrapper(key: "3", value: "Three"))
+        
+        weak var weakN1 = n1
+        weak var weakN2 = n2
+        weak var weakN3 = n3
+        
+        // head | n3 -> n2 -> n1 | tail
+        
+        list.insert(n1!)
+        list.insert(n2!)
+        list.insert(n3!)
+
+        n1 = nil // Remove ownership from local variables
+        n2 = nil
+        n3 = nil
+        
+        while (list.head != nil) {
+            list.removeLast()
+        }
+        
+        XCTAssertNil(weakN1)
+        XCTAssertNil(weakN2)
+        XCTAssertNil(weakN3)
+        
+        XCTAssertNil(list.head)
+        XCTAssertNil(list.tail)
+    }
+
 }
