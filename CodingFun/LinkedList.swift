@@ -8,7 +8,7 @@
 
 import Foundation
 
-class LinkedList<T: Any> where T: Equatable, T: CustomStringConvertible {
+class LinkedList<T> where T: Equatable  {
     private (set) var head: Node<T>?
     private (set) var tail: Node<T>?
     
@@ -18,7 +18,7 @@ class LinkedList<T: Any> where T: Equatable, T: CustomStringConvertible {
             node.next = nil
             head = node
             tail = node
-        } else { // update head
+        } else {        // update head
             node.prev = nil
             node.next = head
             head?.prev = node
@@ -58,7 +58,6 @@ class LinkedList<T: Any> where T: Equatable, T: CustomStringConvertible {
             current?.prev = nil
             current?.next = nil
         }
-        
         head = nil
         tail = nil
     }
@@ -78,3 +77,10 @@ class LinkedList<T: Any> where T: Equatable, T: CustomStringConvertible {
         }
     }
 }
+
+// TODO: Move printList() into CustomStringConvertible
+//extension LinkedList where T: CustomStringConvertible {
+//var description {
+//
+//}
+//}

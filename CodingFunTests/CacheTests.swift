@@ -84,4 +84,19 @@ class CacheTests: XCTestCase {
         
         XCTAssertNil(weakValue)
     }
+    
+    func testCacheFreeMemoryRemoveAll() {
+        let cache = Cache<String>(maxSize: 500_000)
+        let string = String(repeating: "Test", count: 100_000)
+
+        for i in 0 ..< 25 {
+            cache["\(i)"] = string + "\(i)"
+        }
+        cache.removeAll()
+
+        // TODO: Verify memory is cleaned up using debugger memory usage
+        // TODO: Add a collection of weak references to memory and verify it is cleared with multiple values
+        // need to create a struct wrapper around a weak reference to string to verify weak reference
+        // set to nil
+    }
 }

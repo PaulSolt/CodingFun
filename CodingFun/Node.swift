@@ -9,18 +9,18 @@
 import Foundation
 
 
-class Node<T: Any>: Equatable where T: Equatable, T: CustomStringConvertible {
-    
-    static func == (lhs: Node<T>, rhs: Node<T>) -> Bool {
-        return lhs.value == rhs.value
-    }
-    
+class Node<T> {
     var next: Node?
     weak var prev: Node?
-    
     var value: ValueWrapper<T>?
     
     init(value: ValueWrapper<T>) {
         self.value = value
+    }
+}
+
+extension Node: Equatable where T: Equatable {
+    static func == (lhs: Node<T>, rhs: Node<T>) -> Bool {
+        return lhs.value == rhs.value
     }
 }
