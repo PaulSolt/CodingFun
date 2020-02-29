@@ -8,12 +8,7 @@
 
 import Foundation
 
-class ValueWrapper<T: Any>: Equatable, CustomStringConvertible where T: Equatable, T: CustomStringConvertible {
-    
-    static func == (lhs: ValueWrapper<T>, rhs: ValueWrapper<T>) -> Bool {
-        return lhs.value == rhs.value
-    }
-    
+class ValueWrapper<T> {
     var key: String
     var value: T
     weak var node: Node<T>?
@@ -22,8 +17,17 @@ class ValueWrapper<T: Any>: Equatable, CustomStringConvertible where T: Equatabl
         self.key = key
         self.value = value
     }
-    
+}
+
+extension ValueWrapper: Equatable where T: Equatable {
+    static func == (lhs: ValueWrapper<T>, rhs: ValueWrapper<T>) -> Bool {
+        return lhs.value == rhs.value
+    }
+
+}
+
+extension ValueWrapper: CustomStringConvertible { 
     var description: String {
-        return value.description
+        return "\(value)"
     }
 }

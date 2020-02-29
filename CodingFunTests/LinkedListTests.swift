@@ -176,7 +176,6 @@ class LinkedListTests: XCTestCase {
         XCTAssertNil(list.tail)
     }
     
-    
     func testRemoveLastClearsMemory() {
         let list = LinkedList<String>()
         var n1: Node? = Node(value: ValueWrapper(key: "1", value: "One"))
